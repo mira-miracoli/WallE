@@ -4,8 +4,8 @@
     state: directory
     path: "{{ item }}"
     mode: "0755"
-    owner: root
-    group: root
+    owner: "{{ walle_user_name }}"
+    group: "{{ walle_user_group }}"
   with_items:
     - "{{ walle_log_dir }}"
     - "{{ walle_malware_database_location }}"
@@ -14,8 +14,8 @@
   ansible.builtin.template:
     src: walle.py
     dest: "{{ walle_script_location }}"
-    owner: root
-    group: root
+    owner: "{{ walle_user_name }}"
+    group: "{{ walle_user_group }}"
     mode: "0755"
 
 - name: Clone malware database (WallE)

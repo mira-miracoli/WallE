@@ -22,5 +22,5 @@ walle_verbose: false
 walle_cron_day: "*"
 walle_cron_hour: "*/1"
 walle_cron_minute: "0"
-walle_user_name: "{{ galaxy_user_name | default('galaxy') }}"
-walle_user_group: "{{ galaxy_group | default('galaxy') }}"
+walle_user_name: "{{ galaxy_user_name | default('root') }}"
+walle_user_group: "{{ galaxy_group | default('root') }}"
